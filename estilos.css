@@ -1,184 +1,184 @@
-* { /* Selecciona todos los elementos de la página para aplicar una base común de diseño. */
-    box-sizing: border-box; /* Hace que el ancho de los elementos incluya contenido, borde y relleno, evitando desbordamientos. */
-    margin: 0; /* Elimina márgenes predeterminados del navegador para tener control total del diseño. */
-    padding: 0; /* Elimina rellenos predeterminados del navegador para empezar desde una base limpia. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body { /* Aplica estilos generales al cuerpo completo de la página. */
-    font-family: Arial, Helvetica, sans-serif; /* Define una familia de fuentes legible y común en la mayoría de computadores. */
-    min-height: 100vh; /* Hace que el cuerpo mida al menos toda la altura de la pantalla. */
-    background: linear-gradient(135deg, #e8f3ff, #f7fbff); /* Crea un fondo degradado suave para mejorar la apariencia visual. */
-    color: #1f2937; /* Define un color oscuro para el texto principal, facilitando la lectura. */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8f3ff, #f7fbff);
+    color: #1f2937;
 }
 
-.contenedor-principal { /* Estiliza el contenedor general donde se centra la tarjeta del formulario. */
-    min-height: 100vh; /* Permite que el contenedor ocupe toda la altura visible del navegador. */
-    display: flex; /* Activa flexbox para organizar y centrar contenido fácilmente. */
-    align-items: center; /* Centra la tarjeta verticalmente dentro de la pantalla. */
-    justify-content: center; /* Centra la tarjeta horizontalmente dentro de la pantalla. */
-    padding: 30px 16px; /* Agrega espacio interno para que el formulario no toque los bordes en pantallas pequeñas. */
+.contenedor-principal {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 16px;
 }
 
-.tarjeta-formulario { /* Estiliza la caja blanca que contiene todo el formulario. */
-    width: 100%; /* Permite que la tarjeta use todo el ancho disponible si la pantalla es pequeña. */
-    max-width: 760px; /* Limita el ancho máximo para que el formulario no se vea demasiado extendido en computadores. */
-    background: #ffffff; /* Da un fondo blanco a la tarjeta para separarla del fondo general. */
-    border-radius: 22px; /* Redondea las esquinas para un diseño más moderno. */
-    padding: 34px; /* Agrega espacio interno entre los bordes de la tarjeta y su contenido. */
-    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15); /* Crea una sombra suave que da sensación de profundidad. */
+.tarjeta-formulario {
+    width: 100%;
+    max-width: 760px;
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 34px;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
 }
 
-.encabezado { /* Estiliza el bloque superior donde están el título y la descripción. */
-    text-align: center; /* Centra el texto del encabezado para una presentación más clara. */
-    margin-bottom: 28px; /* Deja espacio debajo del encabezado antes de iniciar el formulario. */
+.encabezado {
+    text-align: center;
+    margin-bottom: 28px;
 }
 
-.etiqueta { /* Estiliza la pequeña etiqueta superior del proyecto. */
-    display: inline-block; /* Permite que la etiqueta tenga relleno y se comporte como una pequeña caja. */
-    margin-bottom: 12px; /* Separa la etiqueta del título principal. */
-    padding: 6px 12px; /* Agrega espacio interno a la etiqueta. */
-    border-radius: 999px; /* Redondea completamente la etiqueta para darle forma de cápsula. */
-    background: #dbeafe; /* Define un fondo azul claro para resaltar la etiqueta. */
-    color: #1d4ed8; /* Define un color azul fuerte para el texto de la etiqueta. */
-    font-size: 14px; /* Define un tamaño pequeño pero legible para la etiqueta. */
-    font-weight: bold; /* Resalta la etiqueta con texto en negrita. */
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-h1 { /* Estiliza el título principal. */
-    font-size: 30px; /* Define un tamaño grande para indicar jerarquía visual. */
-    margin-bottom: 10px; /* Deja espacio entre el título y la descripción. */
-    color: #0f172a; /* Usa un color oscuro para que el título tenga buen contraste. */
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #0f172a;
 }
 
-.encabezado p { /* Estiliza el párrafo descriptivo que está dentro del encabezado. */
-    color: #64748b; /* Usa gris azulado para diferenciar el texto secundario del título. */
-    line-height: 1.5; /* Aumenta el espacio entre líneas para mejorar la lectura. */
+.encabezado p {
+    color: #64748b;
+    line-height: 1.5;
 }
 
-form { /* Estiliza el formulario completo. */
-    display: grid; /* Usa CSS Grid para organizar los campos de manera ordenada. */
-    gap: 18px; /* Define el espacio entre cada grupo de campos. */
+form {
+    display: grid;
+    gap: 18px;
 }
 
-.fila-doble { /* Estiliza la fila que contiene dos campos lado a lado. */
-    display: grid; /* Usa grid para dividir la fila en columnas. */
-    grid-template-columns: 1fr 1fr; /* Crea dos columnas del mismo tamaño. */
-    gap: 18px; /* Agrega espacio entre las dos columnas. */
+.fila-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
 }
 
-.grupo-campo { /* Estiliza cada grupo compuesto por label, campo y error. */
-    display: flex; /* Usa flexbox para organizar elementos en una columna. */
-    flex-direction: column; /* Coloca el label arriba, el campo en medio y el error abajo. */
-    gap: 7px; /* Agrega separación entre los elementos del grupo. */
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
-label { /* Estiliza todos los textos label de los campos. */
-    font-weight: bold; /* Hace que el nombre del campo se vea más importante. */
-    color: #334155; /* Usa un gris oscuro para mantener buena legibilidad. */
+label {
+    font-weight: bold;
+    color: #334155;
 }
 
-input, select, textarea { /* Aplica estilos comunes a campos de texto, listas y áreas de texto. */
-    width: 100%; /* Hace que cada campo ocupe todo el ancho disponible de su contenedor. */
-    padding: 13px 14px; /* Agrega espacio interno para que escribir sea cómodo. */
-    border: 1px solid #cbd5e1; /* Define un borde suave alrededor de los campos. */
-    border-radius: 12px; /* Redondea los campos para un diseño moderno. */
-    font-size: 16px; /* Define un tamaño de letra cómodo para lectura y escritura. */
-    outline: none; /* Quita el contorno predeterminado del navegador al enfocar un campo. */
-    transition: border-color 0.2s, box-shadow 0.2s; /* Suaviza el cambio visual cuando el usuario interactúa con el campo. */
+input, select, textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-input:focus, select:focus, textarea:focus { /* Aplica estilos cuando un campo está activo o seleccionado. */
-    border-color: #2563eb; /* Cambia el borde a azul para indicar que el campo está seleccionado. */
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12); /* Agrega un resplandor suave que mejora la accesibilidad visual. */
+input:focus, select:focus, textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
 }
 
-textarea { /* Estiliza específicamente el área de texto. */
-    resize: vertical; /* Permite cambiar la altura del textarea, pero no el ancho. */
+textarea {
+    resize: vertical;
 }
 
-.mensaje-error { /* Estiliza los mensajes pequeños de error debajo de cada campo. */
-    min-height: 18px; /* Reserva espacio para que el diseño no salte cuando aparezca un error. */
-    color: #dc2626; /* Usa rojo para indicar que hay un problema que debe corregirse. */
-    font-size: 14px; /* Usa un tamaño menor que el texto principal para mensajes secundarios. */
+.mensaje-error {
+    min-height: 18px;
+    color: #dc2626;
+    font-size: 14px;
 }
 
-.campo-invalido { /* Clase que JavaScript agregará a campos con errores. */
-    border-color: #dc2626; /* Cambia el borde del campo a rojo para mostrar visualmente el error. */
+.campo-invalido {
+    border-color: #dc2626;
 }
 
-.campo-valido { /* Clase que JavaScript agregará a campos correctos. */
-    border-color: #16a34a; /* Cambia el borde del campo a verde para indicar que está correcto. */
+.campo-valido {
+    border-color: #16a34a;
 }
 
-.boton-enviar { /* Estiliza el botón principal de envío. */
-    border: none; /* Elimina el borde predeterminado del botón. */
-    border-radius: 14px; /* Redondea el botón para que combine con el diseño de los campos. */
-    padding: 15px 18px; /* Agrega espacio interno para que el botón sea cómodo de presionar. */
-    background: #2563eb; /* Usa azul como color principal del botón. */
-    color: #ffffff; /* Usa texto blanco para contrastar con el fondo azul. */
-    font-size: 17px; /* Define un tamaño de texto destacado para el botón. */
-    font-weight: bold; /* Hace que el texto del botón se vea más fuerte. */
-    cursor: pointer; /* Cambia el cursor a una mano para indicar que el botón se puede presionar. */
-    transition: transform 0.2s, background 0.2s; /* Suaviza el cambio de color y movimiento al interactuar con el botón. */
+.boton-enviar {
+    border: none;
+    border-radius: 14px;
+    padding: 15px 18px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
 }
 
-.boton-enviar:hover { /* Aplica estilos cuando el mouse pasa sobre el botón. */
-    background: #1d4ed8; /* Oscurece un poco el azul para indicar interacción. */
-    transform: translateY(-1px); /* Mueve el botón levemente hacia arriba para dar sensación de respuesta. */
+.boton-enviar:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
 }
 
-.mensaje-general { /* Estiliza la zona donde aparece el mensaje principal después de validar. */
-    margin-top: 18px; /* Separa el mensaje general del formulario. */
-    padding: 14px; /* Agrega espacio interno para que el mensaje sea fácil de leer. */
-    border-radius: 12px; /* Redondea el contenedor del mensaje. */
-    display: none; /* Oculta el mensaje inicialmente hasta que JavaScript lo necesite. */
-    font-weight: bold; /* Resalta el mensaje para que el usuario lo note. */
+.mensaje-general {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 12px;
+    display: none;
+    font-weight: bold;
 }
 
-.mensaje-general.exito { /* Estiliza el mensaje general cuando la validación es correcta. */
-    display: block; /* Muestra el mensaje en pantalla. */
-    background: #dcfce7; /* Usa fondo verde claro para indicar éxito. */
-    color: #166534; /* Usa texto verde oscuro para mantener contraste. */
+.mensaje-general.exito {
+    display: block;
+    background: #dcfce7;
+    color: #166534;
 }
 
-.mensaje-general.error { /* Estiliza el mensaje general cuando hay errores. */
-    display: block; /* Muestra el mensaje en pantalla. */
-    background: #fee2e2; /* Usa fondo rojo claro para indicar problema. */
-    color: #991b1b; /* Usa texto rojo oscuro para mantener contraste. */
+.mensaje-general.error {
+    display: block;
+    background: #fee2e2;
+    color: #991b1b;
 }
 
-.resumen { /* Estiliza la tarjeta donde se muestra el resumen final. */
-    margin-top: 18px; /* Separa el resumen del mensaje general. */
-    padding: 18px; /* Agrega espacio interno para organizar el contenido. */
-    border-radius: 16px; /* Redondea las esquinas del resumen. */
-    background: #f8fafc; /* Usa un fondo gris muy claro para diferenciar el resumen. */
-    border: 1px solid #e2e8f0; /* Agrega un borde suave alrededor del resumen. */
+.resumen {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
 }
 
-.resumen h2 { /* Estiliza el título del resumen. */
-    font-size: 20px; /* Define un tamaño menor que el título principal, pero aún destacado. */
-    margin-bottom: 8px; /* Separa el título del texto del resumen. */
+.resumen h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
 }
 
-.resumen p { /* Estiliza el texto del resumen. */
-    line-height: 1.6; /* Mejora la lectura del resumen aumentando el espacio entre líneas. */
-    color: #334155; /* Usa gris oscuro para un texto cómodo de leer. */
+.resumen p {
+    line-height: 1.6;
+    color: #334155;
 }
 
-.oculto { /* Clase reutilizable para ocultar elementos. */
-    display: none; /* Hace que el elemento no se vea ni ocupe espacio en la página. */
+.oculto {
+    display: none;
 }
 
-@media (max-width: 640px) { /* Aplica reglas especiales cuando la pantalla mide 640 píxeles o menos. */
-    .tarjeta-formulario { /* Ajusta la tarjeta en celulares. */
-        padding: 24px; /* Reduce el espacio interno para aprovechar mejor pantallas pequeñas. */
+@media (max-width: 640px) {
+    .tarjeta-formulario {
+        padding: 24px;
     }
 
-    .fila-doble { /* Ajusta la fila de dos columnas en celulares. */
-        grid-template-columns: 1fr; /* Convierte las dos columnas en una sola columna para mejorar la lectura. */
+    .fila-doble {
+        grid-template-columns: 1fr;
     }
 
-    h1 { /* Ajusta el título principal en celulares. */
-        font-size: 24px; /* Reduce el tamaño del título para que no se corte en pantallas pequeñas. */
+    h1 {
+        font-size: 24px;
     }
 }

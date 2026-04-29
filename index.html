@@ -1,76 +1,76 @@
-<!DOCTYPE html> <!-- Indica al navegador que este documento usa HTML5, la versión moderna del lenguaje HTML. -->
-<html lang="es"> <!-- Abre el documento HTML y declara que el idioma principal de la página es español. -->
-<head> <!-- Abre la cabecera del documento; aquí van configuraciones que el usuario normalmente no ve directamente. -->
-    <meta charset="UTF-8"> <!-- Permite que el navegador muestre correctamente tildes, eñes y caracteres especiales del español. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página se adapte bien a celulares, tabletas y computadores. -->
-    <title>Formulario de Inscripción a Talleres</title> <!-- Define el texto que aparece en la pestaña del navegador. -->
-    <link rel="stylesheet" href="estilos.css"> <!-- Conecta este archivo HTML con el archivo CSS que contiene el diseño visual. -->
-</head> <!-- Cierra la cabecera del documento. -->
-<body> <!-- Abre el cuerpo de la página; aquí va todo lo que el usuario puede ver e interactuar. -->
-    <main class="contenedor-principal"> <!-- Crea la zona principal de la página y le asigna una clase para darle estilos desde CSS. -->
-        <section class="tarjeta-formulario"> <!-- Crea una tarjeta visual donde estará el formulario completo. -->
-            <header class="encabezado"> <!-- Agrupa el título y la descripción inicial del formulario. -->
-                <span class="etiqueta">Proyecto web</span> <!-- Muestra una pequeña etiqueta decorativa para presentar el tipo de actividad. -->
-                <h1>Inscripción a talleres comunitarios</h1> <!-- Muestra el título principal visible de la página. -->
-                <p>Completa el formulario. El sistema validará tus datos antes de confirmar la inscripción.</p> <!-- Explica al usuario qué debe hacer y qué hará el sistema. -->
-            </header> <!-- Cierra la sección del encabezado. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción a Talleres</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="contenedor-principal">
+        <section class="tarjeta-formulario">
+            <header class="encabezado">
+                <span class="etiqueta">Proyecto web</span>
+                <h1>Inscripción a talleres comunitarios</h1>
+                <p>Completa el formulario. El sistema validará tus datos antes de confirmar la inscripción.</p>
+            </header>
 
-            <form id="formularioInscripcion" novalidate> <!-- Crea el formulario; el id permite controlarlo con JavaScript y novalidate desactiva la validación automática del navegador para usar nuestra propia lógica. -->
-                <div class="grupo-campo"> <!-- Agrupa el texto, el campo y el mensaje de error del nombre. -->
-                    <label for="nombre">Nombre completo</label> <!-- Texto que identifica el campo; for lo conecta con el input cuyo id es nombre. -->
-                    <input type="text" id="nombre" placeholder="Ejemplo: Laura Gómez"> <!-- Campo donde el usuario escribe su nombre; type text significa texto común. -->
-                    <small id="errorNombre" class="mensaje-error"></small> <!-- Espacio reservado para mostrar errores relacionados con el nombre. -->
-                </div> <!-- Cierra el grupo del campo nombre. -->
+            <form id="formularioInscripcion" novalidate>
+                <div class="grupo-campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Ejemplo: Laura Gómez">
+                    <small id="errorNombre" class="mensaje-error"></small>
+                </div>
 
-                <div class="grupo-campo"> <!-- Agrupa el texto, el campo y el mensaje de error del correo. -->
-                    <label for="correo">Correo electrónico</label> <!-- Texto que identifica el campo de correo y lo conecta con el input correo. -->
-                    <input type="email" id="correo" placeholder="Ejemplo: usuario@correo.com"> <!-- Campo para escribir correo; type email indica que se espera una dirección de correo. -->
-                    <small id="errorCorreo" class="mensaje-error"></small> <!-- Espacio reservado para mostrar errores relacionados con el correo. -->
-                </div> <!-- Cierra el grupo del campo correo. -->
+                <div class="grupo-campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="Ejemplo: usuario@correo.com">
+                    <small id="errorCorreo" class="mensaje-error"></small>
+                </div>
 
-                <div class="fila-doble"> <!-- Crea una fila con dos campos para organizar edad y teléfono en pantallas grandes. -->
-                    <div class="grupo-campo"> <!-- Agrupa el texto, el campo y el mensaje de error de la edad. -->
-                        <label for="edad">Edad</label> <!-- Texto que identifica el campo edad y lo conecta con el input edad. -->
-                        <input type="number" id="edad" placeholder="Ejemplo: 15"> <!-- Campo numérico para la edad; type number facilita escribir números. -->
-                        <small id="errorEdad" class="mensaje-error"></small> <!-- Espacio reservado para mostrar errores relacionados con la edad. -->
-                    </div> <!-- Cierra el grupo del campo edad. -->
+                <div class="fila-doble">
+                    <div class="grupo-campo">
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" placeholder="Ejemplo: 15">
+                        <small id="errorEdad" class="mensaje-error"></small>
+                    </div>
 
-                    <div class="grupo-campo"> <!-- Agrupa el texto, el campo y el mensaje de error del contacto. -->
-                        <label for="contacto">Número de contacto</label> <!-- Texto que identifica el campo contacto y lo conecta con el input contacto. -->
-                        <input type="text" id="contacto" placeholder="10 dígitos"> <!-- Campo de texto para teléfono; se usa text porque luego validaremos exactamente 10 dígitos con JavaScript. -->
-                        <small id="errorContacto" class="mensaje-error"></small> <!-- Espacio reservado para mostrar errores relacionados con el número de contacto. -->
-                    </div> <!-- Cierra el grupo del campo contacto. -->
-                </div> <!-- Cierra la fila doble. -->
+                    <div class="grupo-campo">
+                        <label for="contacto">Número de contacto</label>
+                        <input type="text" id="contacto" placeholder="10 dígitos">
+                        <small id="errorContacto" class="mensaje-error"></small>
+                    </div>
+                </div>
 
-                <div class="grupo-campo"> <!-- Agrupa el texto, la lista desplegable y el mensaje de error del taller. -->
-                    <label for="taller">Taller de interés</label> <!-- Texto que identifica la lista de talleres y la conecta con el select taller. -->
-                    <select id="taller"> <!-- Crea una lista desplegable para que el usuario elija una opción. -->
-                        <option value="">Selecciona un taller</option> <!-- Opción inicial vacía; sirve para detectar si el usuario no ha elegido un taller real. -->
-                        <option value="Programación web básica">Programación web básica</option> <!-- Opción válida que representa un taller de programación web. -->
-                        <option value="Excel para emprendimientos">Excel para emprendimientos</option> <!-- Opción válida que representa un taller de Excel. -->
-                        <option value="Marketing digital comunitario">Marketing digital comunitario</option> <!-- Opción válida que representa un taller de marketing digital. -->
-                    </select> <!-- Cierra la lista desplegable. -->
-                    <small id="errorTaller" class="mensaje-error"></small> <!-- Espacio reservado para mostrar errores relacionados con la selección del taller. -->
-                </div> <!-- Cierra el grupo del campo taller. -->
+                <div class="grupo-campo">
+                    <label for="taller">Taller de interés</label>
+                    <select id="taller">
+                        <option value="">Selecciona un taller</option>
+                        <option value="Programación web básica">Programación web básica</option>
+                        <option value="Excel para emprendimientos">Excel para emprendimientos</option>
+                        <option value="Marketing digital comunitario">Marketing digital comunitario</option>
+                    </select>
+                    <small id="errorTaller" class="mensaje-error"></small>
+                </div>
 
-                <div class="grupo-campo"> <!-- Agrupa el texto, el área de mensaje y el mensaje de error de observaciones. -->
-                    <label for="mensaje">Observación o mensaje</label> <!-- Texto que identifica el área donde el usuario puede escribir una observación. -->
-                    <textarea id="mensaje" rows="4" placeholder="Escribe una observación opcional"></textarea> <!-- Área de texto para mensajes largos; rows indica la altura inicial aproximada. -->
-                    <small id="errorMensaje" class="mensaje-error"></small> <!-- Espacio reservado para mostrar errores relacionados con el mensaje. -->
-                </div> <!-- Cierra el grupo del campo mensaje. -->
+                <div class="grupo-campo">
+                    <label for="mensaje">Observación o mensaje</label>
+                    <textarea id="mensaje" rows="4" placeholder="Escribe una observación opcional"></textarea>
+                    <small id="errorMensaje" class="mensaje-error"></small>
+                </div>
 
-                <button type="submit" class="boton-enviar">Enviar inscripción</button> <!-- Botón que intenta enviar el formulario; JavaScript interceptará este evento para validar primero. -->
-            </form> <!-- Cierra el formulario. -->
+                <button type="submit" class="boton-enviar">Enviar inscripción</button>
+            </form>
 
-            <div id="mensajeGeneral" class="mensaje-general" aria-live="polite"></div> <!-- Zona donde se mostrará un mensaje general de error o confirmación; aria-live ayuda a lectores de pantalla. -->
+            <div id="mensajeGeneral" class="mensaje-general" aria-live="polite"></div>
 
-            <section id="resumenDatos" class="resumen oculto"> <!-- Tarjeta donde aparecerá el resumen de datos; inicia oculta hasta que el formulario sea válido. -->
-                <h2>Resumen de inscripción</h2> <!-- Título de la tarjeta de resumen. -->
-                <p id="resumenTexto"></p> <!-- Párrafo donde JavaScript insertará el resumen con los datos escritos por el usuario. -->
-            </section> <!-- Cierra la tarjeta de resumen. -->
-        </section> <!-- Cierra la tarjeta principal del formulario. -->
-    </main> <!-- Cierra la zona principal de la página. -->
+            <section id="resumenDatos" class="resumen oculto">
+                <h2>Resumen de inscripción</h2>
+                <p id="resumenTexto"></p>
+            </section>
+        </section>
+    </main>
 
-    <script src="script.js"></script> <!-- Conecta el archivo JavaScript que contiene la lógica de validación del formulario. -->
-</body> <!-- Cierra el cuerpo visible de la página. -->
-</html> <!-- Cierra el documento HTML. -->
+    <script src="script.js"></script>
+</body>
+</html>
